@@ -13,13 +13,7 @@ $con=new mysqli("localhost","root","","reg");
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
-    apiKey: "AIzaSyC0eDABmBM7Sh2ebkF5hmaZnMUkLaXqLWk",
-    authDomain: "vcab-c9720.firebaseapp.com",
-    databaseURL: "https://vcab-c9720.firebaseio.com",
-    projectId: "vcab-c9720",
-    storageBucket: "vcab-c9720.appspot.com",
-    messagingSenderId: "484062126056",
-    appId: "1:484062126056:web:5562db088e2ed01f8e4e5d"
+    
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
