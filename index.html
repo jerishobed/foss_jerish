@@ -1,0 +1,129 @@
+
+<!doctype html>
+<html>
+<head><title>Graduation day</title>
+<meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC0eDABmBM7Sh2ebkF5hmaZnMUkLaXqLWk",
+    authDomain: "vcab-c9720.firebaseapp.com",
+    databaseURL: "https://vcab-c9720.firebaseio.com",
+    projectId: "vcab-c9720",
+    storageBucket: "vcab-c9720.appspot.com",
+    messagingSenderId: "484062126056",
+    appId: "1:484062126056:web:5562db088e2ed01f8e4e5d"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  console.log(firebase);
+  
+  var ref = firebase.database().ref("Users");
+
+  ref.on("value", function(snapshot) {
+   console.log(snapshot.val());
+}, function (error) {
+   console.log("Error: " + error.code);
+});
+  var Users = document.getElementById("Users");
+  /*
+  firebase.database().ref('Users').once('value').then(function (snapshort){
+		var name = snapshort.val().Customers;
+		document.getElementById("Users").innerHTML=name;
+	});
+  
+ */ 
+  
+</script>
+<script type="text/javascript" src="read.js"></script>
+
+<style>
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #b5633f;
+}
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #f2dede;
+	-webkit-box-shadow: 10px 17px 32px -9px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 17px 32px -9px rgba(0,0,0,0.75);
+box-shadow: 10px 17px 32px -9px rgba(0,0,0,0.75);
+}
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #d9edf7;
+    border: 1px solid #da4e18;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+	-webkit-box-shadow: 3px 10px 18px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 10px 18px 3px rgba(0,0,0,0.75);
+box-shadow: 3px 10px 18px 3px rgba(0,0,0,0.75);
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #e61c06;
+}
+#h{ position: fixed;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    width: 380px;
+	height:350px;
+    overflow-y: scroll}
+</style>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="col-md-12 ">
+		<div class="col-md-4 ">
+		
+		</div>
+		<div class="col-md-8 ">
+			<h1 class="text-left ">Traffic Conrol System</h1>
+			
+			
+			</div>
+			
+			</div>
+			<br><br><br><br><br>
+			<div class= "row ">
+			<div class="col-md-12 well">
+				<div class="col-md-4">
+				
+					<p>
+						<strong id="Users">List of available drivers : </strong>
+					</p>
+				</div>
+				
+				<div class="col-md-4">
+			
+			
+		</div>		
+		
+			</div>
+		</div>
+	</div>
+	</div>
+</body>
+</html>
